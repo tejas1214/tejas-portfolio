@@ -264,6 +264,10 @@ h1 span {
   max-width: 34ch;
 }
 
+.mobile-profile-frame {
+  display: none;
+}
+
 h2 {
   color: var(--text);
   font-size: clamp(2rem, 4vw, 3.35rem);
@@ -932,7 +936,48 @@ h3 {
 
 @media (max-width: 680px) {
   .hero {
-    padding-bottom: 56px;
+    padding-bottom: 44px;
+  }
+
+  .mobile-title-row {
+    align-items: center;
+    display: grid;
+    gap: 14px;
+    grid-template-columns: minmax(0, 1fr) 112px;
+  }
+
+  .mobile-title-row h1 {
+    font-size: clamp(3rem, 14vw, 4.2rem);
+    max-width: none;
+  }
+
+  .mobile-title-row h1 span {
+    font-size: clamp(1.05rem, 4.5vw, 1.28rem);
+    max-width: 22ch;
+  }
+
+  .mobile-profile-frame {
+    align-self: start;
+    background: radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.16), transparent 56%), rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 999px;
+    display: block;
+    height: 146px;
+    margin: 6px 0 0;
+    overflow: hidden;
+    width: 112px;
+  }
+
+  .mobile-profile-frame img {
+    filter: grayscale(1) contrast(1.08);
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+    width: 100%;
+  }
+
+  .hero-visual {
+    display: none;
   }
 
   .hero-actions,
@@ -979,15 +1024,6 @@ h3 {
   .beyond-grid,
   .principles-grid {
     grid-template-columns: 1fr;
-  }
-
-  .hero-visual {
-    min-height: 360px;
-  }
-
-  .hero-visual figure {
-    min-height: 340px;
-    width: min(78vw, 360px);
   }
 
   .about-media {
