@@ -418,9 +418,9 @@ h3 {
 
 .hero-visual .orb {
   background:
-    radial-gradient(circle at 50% 42%, rgba(253, 111, 0, 0.2), transparent 34%),
-    linear-gradient(135deg, rgba(253, 111, 0, 0.24), rgba(255, 255, 255, 0.04));
-  border: 1px solid rgba(253, 111, 0, 0.18);
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.16), transparent 34%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 50%;
   height: min(42vw, 580px);
   max-height: 580px;
@@ -432,6 +432,7 @@ h3 {
 }
 
 .hero-visual figure {
+  background: radial-gradient(circle at 50% 26%, rgba(255, 255, 255, 0.18), transparent 42%), rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 220px;
   box-shadow: var(--shadow);
@@ -450,6 +451,12 @@ h3 {
   height: 100%;
   object-fit: cover;
   width: 100%;
+}
+
+.hero-visual .profile-photo {
+  filter: grayscale(1) contrast(1.08);
+  object-fit: contain;
+  object-position: center bottom;
 }
 
 .section {
